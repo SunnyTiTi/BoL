@@ -163,7 +163,9 @@ function LevelUp()
 		
 		autoLevelSetSequence(Sequence)
 		
-		PrintChat("One point has been set to skill " .. Skills[Sequence[myHero.level]] .. ". Skill " .. Skills[Sequence[myHero.level + 1]] .. " will be increased once you Level-UP." );
+		if myHero.level < 18 then
+			PrintChat("One point has been set to skill " .. Skills[Sequence[myHero.level]] .. ". Skill " .. Skills[Sequence[myHero.level + 1]] .. " will be increased once you Level-UP." );
+		end
 		
 		LastLevel = myHero.level
 	else

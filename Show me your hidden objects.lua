@@ -21,9 +21,9 @@ if AUTO_UPDATE then
 			end
 
 			if ServerVersion ~= nil and tonumber(ServerVersion) ~= nil and tonumber(ServerVersion) > tonumber(version) then
-				DownloadFile(UPDATE_URL.."?nocache"..myHero.charName..os.clock(), UPDATE_FILE_PATH, function () print("<font color=\"#FF0000\"><b>"..UPDATE_SCRIPT_NAME..":</b> successfully updated. Reload (double F9) Please. ("..version.." => "..ServerVersion..")</font>") end)     
+				DownloadFile(UPDATE_URL .. "?nocache" .. myHero.charName .. os.clock(), UPDATE_FILE_PATH, function () print("<font color=\"#FF0000\"><b>"..UPDATE_SCRIPT_NAME..":</b> successfully updated. Please reload (double F9). (" .. version .. " => " .. ServerVersion .. ")</font>") end)     
 			elseif ServerVersion then
-				print("<font color=\"#FF0000\"><b>"..UPDATE_SCRIPT_NAME..":</b> You have got the latest version: <u><b>"..ServerVersion.."</b></u></font>")
+				-- print("<font color=\"#FF0000\"><b>"..UPDATE_SCRIPT_NAME..":</b> You have got the latest version: <u><b>"..ServerVersion.."</b></u></font>")
 			end		
 			ServerData = nil
 		end
@@ -43,20 +43,20 @@ end
 
 function OnCreateObj(obj)
 	local name = obj.name:lower()
-	if (name ~= "missile") and (string.sub(name, 0, 6) ~= "minion") then
-		PrintChat(name)
+	--[[
+	if (name ~= "missile") and (name ~= "empty.troy") and (string.sub(name, 0, 6) ~= "minion") and (string.sub(name, 0, 3) ~= "sru") and (string.sub(name, 0, 4) ~= "draw") then
+		PrintChat("CREATE " .. name)
 	end
-	if ((name == "sightward") or (name == "noxious trap") or (name == "jack in the box")) and (obj.team ~= myHero.team) then
+	]]
+	if ((name == "sightward") or (name == "visionward") or (name == "noxious trap") or (name == "jack in the box")) and (obj.team ~= myHero.team) and (obj.mana > 0) then
 		local ward = {x = obj.x, y = obj.y, z = obj.z, mana = obj.mana, time = GetGameTimer()}
 		table.insert(wards, ward);
-		--print(name .. " at " .. GetGameTimer() .. " : " .. obj.x .. " - ".. obj.y .. " - " .. obj.z)
-		--print(obj.team)
 	end
 end
 
 function OnDeleteObj(obj)
 	local name = obj.name:lower()
-	if ((name == "sightward") or (name == "noxious trap") or (name == "jack in the box")) and (obj.team ~= myHero.team) then
+	if ((name == "sightward") or (name == "visionward") or (name == "noxious trap") or (name == "jack in the box")) and (obj.team ~= myHero.team) then
 		for key, ward in pairs(wards) do
 			if (obj.x == ward.x) and (obj.x == ward.x) and (obj.x == ward.x) then
 				table.remove(wards, key)
@@ -69,8 +69,7 @@ function OnDraw()
 	if Menu.Enable then
 		for key, ward in pairs(wards) do
 			-- currentMana = ward.mana - (GetGameTimer() - ward.time)
-			local color = RGBA(127, 196, 0, 255)
-			DrawCircle(ward.x, ward.y, ward.z, 100, color)
+			DrawCircle(ward.x, ward.y, ward.z, 100, RGBA(127, 196, 0, 255))
 		end
 	end
 end

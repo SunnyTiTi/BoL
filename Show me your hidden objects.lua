@@ -1,4 +1,4 @@
-local version = "0.2"
+local version = "0.21"
 local AUTO_UPDATE = true
 local UPDATE_SCRIPT_NAME = "Show me your hidden objects"
 local UPDATE_HOST = "raw.github.com"
@@ -68,8 +68,9 @@ end
 function OnDraw()
 	if Menu.Enable then
 		for key, ward in pairs(wards) do
-			-- currentMana = ward.mana - (GetGameTimer() - ward.time)
-			DrawCircle(ward.x, ward.y, ward.z, 100, RGBA(127, 196, 0, 255))
+			currentMana = math.floor(ward.mana - (GetGameTimer() - ward.time))
+			LagFreeDrawCircle(ward.x, ward.y, ward.z, 100, RGBA(127, 255, 0, 255))
+			DrawText3D(tostring(currentMana), ward.x, ward.y, ward.z, 20, RGBA(127, 255, 0, 255), true)
 		end
 	end
 end
@@ -82,4 +83,29 @@ function OnTick()
 			end
 		end
 	end
+end
+
+function DrawCircleNextLvl(x, y, z, radius, width, color, chordlength)
+	radius = radius or 300
+	quality = math.max(8,round(180/math.deg((math.asin((chordlength/(2*radius)))))))
+	quality = 2 * math.pi / quality
+	radius = radius*.92
+	local points = {}
+	for theta = 0, 2 * math.pi + quality, quality do
+		local c = WorldToScreen(D3DXVECTOR3(x + radius * math.cos(theta), y, z - radius * math.sin(theta)))
+		points[#points + 1] = D3DXVECTOR2(c.x, c.y)
+	end
+	DrawLines2(points, width or 1, color or 4294967295)
+end
+function round(num) 
+	if num >= 0 then return math.floor(num+.5) else return math.ceil(num-.5) end
+end
+function LagFreeDrawCircle(x, y, z, radius, color)
+    local vPos1 = Vector(x, y, z)
+    local vPos2 = Vector(cameraPos.x, cameraPos.y, cameraPos.z)
+    local tPos = vPos1 - (vPos1 - vPos2):normalized() * radius
+    local sPos = WorldToScreen(D3DXVECTOR3(tPos.x, tPos.y, tPos.z))
+    if OnScreen({ x = sPos.x, y = sPos.y }, { x = sPos.x, y = sPos.y }) then
+        DrawCircleNextLvl(x, y, z, radius, 1, color, 100) 
+    end
 end

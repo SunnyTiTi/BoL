@@ -37,9 +37,16 @@ function OnLoad()
 	PrintChat(">> Show me your hidden objects ... LOADED")
 
 	Menu = scriptConfig("Show me your hidden objects", "Show me your hidden objects")
-	Menu:addParam("Enable", "Enable", SCRIPT_PARAM_ONOFF, true)
+	Menu:addParam("HiddenObjects", "Hidden Objects", SCRIPT_PARAM_ONOFF, true)
+	
+	Menu:addSubMenu("Waypoints", "Waypoints")
+	Menu.Waypoints:addParam("Allies", "Allies", SCRIPT_PARAM_ONOFF, true)
+	Menu.Waypoints:addParam("Enemies", "Enemies", SCRIPT_PARAM_ONOFF, true)
 end
 
+function OnTick()
+
+end
 
 function OnCreateObj(obj)
 	local name = obj.name:lower()
@@ -66,23 +73,30 @@ function OnDeleteObj(obj)
 end
  
 function OnDraw()
-	if Menu.Enable then
+	if Menu.HiddenObjects then
 		for key, ward in pairs(wards) do
 			currentMana = math.floor(ward.mana - (GetGameTimer() - ward.time))
-			LagFreeDrawCircle(ward.x, ward.y, ward.z, 100, RGBA(127, 255, 0, 255))
-			DrawText3D(tostring(currentMana), ward.x, ward.y, ward.z, 20, RGBA(127, 255, 0, 255), true)
-		end
-	end
-end
-
-function OnTick()
-	if Menu.Enable then
-		for key, ward in pairs(wards) do
-			if (GetGameTimer() - ward.time > ward.mana) and (ward.vision == false) then
+			if (currentMana <= 0) then
 				table.remove(wards, key)
+			else
+				LagFreeDrawCircle(ward.x, ward.y, ward.z, 100, RGBA(127, 255, 0, 255))
+				DrawText3D(tostring(currentMana), ward.x, ward.y, ward.z, 20, RGBA(127, 255, 0, 255), true)
 			end
 		end
 	end
+	--[[
+	for i=1, heroManager.iCount do
+		local enemy = heroManager:GetHero(i)
+		if isAblaze(enemy) then
+			PrintChat(enemy.charName .. " is ablaze!")
+		end
+	end
+	]]
+	--LagFreeDrawCircle(myHero.endPath.x, myHero.endPath.y, myHero.endPath.z, 100, RGBA(127, 255, 0, 255))
+end
+
+function DrawPath(hero)
+	
 end
 
 function DrawCircleNextLvl(x, y, z, radius, width, color, chordlength)

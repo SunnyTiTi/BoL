@@ -19,7 +19,7 @@ Sequences = {
     ["Brand"]			=	{2, 3, 2, 1, 2, 4, 2, 3, 2, 3, 4, 3, 3, 1, 1, 4, 1, 1},
     ["Braum"]			=	{1, 3, 2, 1, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2},
     ["Caitlyn"]			=	{2, 1, 1, 3, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2},
-    ["Cassiopeia"]		=	{1, 3, 1, 2, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2},
+    ["Cassiopeia"]		=	{1, 3, 3, 2, 3, 4, 3, 2, 3, 2, 4, 2, 2, 1, 1, 4, 1, 1},
     ["Chogath"]			=	{1, 3, 2, 2, 2, 4, 2, 3, 2, 3, 4, 3, 3, 1, 1, 4, 1, 1},
     ["Corki"]			=	{1, 2, 1, 3, 1, 4, 1, 3, 1, 3, 4, 3, 2, 3, 2, 4, 2, 2},
     ["Darius"]			=	{1, 3, 1, 2, 1, 4, 1, 2, 1, 2, 4, 2, 3, 2, 3, 4, 3, 3},
@@ -28,7 +28,7 @@ Sequences = {
     ["Draven"]			=	{1, 3, 2, 1, 1, 4, 1, 2, 1, 2, 4, 2, 2, 3, 3, 4, 3, 3},
     ["Elise"]			=	{1, 3, 1, 2, 1, 4, 1, 2, 1, 2, 4, 2, 2, 3, 3, 4, 3, 3},
     ["Evelynn"]			=	{1, 3, 1, 2, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2},
-    ["Ezreal"]			=	{1, 3, 2, 2, 2, 4, 2, 1, 2, 1, 4, 1, 1, 3, 3, 4, 3, 3},
+    ["Ezreal"]			=	{1, 3, 1, 2, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2},
     ["FiddleSticks"]	=	{3, 2, 2, 1, 2, 4, 2, 1, 2, 1, 4, 1, 1, 3, 3, 4, 3, 3},
     ["Fiora"]			=	{2, 1, 3, 2, 2, 4, 2, 3, 2, 3, 4, 3, 3, 1, 1, 4, 1, 1},
     ["Fizz"]			=	{3, 1, 2, 1, 2, 4, 1, 1, 1, 2, 4, 2, 2, 3, 3, 4, 3, 3},
@@ -46,7 +46,7 @@ Sequences = {
     ["Jax"]				=	{3, 2, 1, 2, 2, 4, 2, 3, 2, 3, 4, 1, 3, 1, 1, 4, 3, 1},
     ["Jayce"]			=	{1, 3, 1, 2, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2},
     ["Jinx"]			=	{1, 2, 3, 1, 1, 4, 1, 2, 1, 2, 4, 2, 2, 3, 3, 4, 3, 3},
-    ["Kalista"]			=	{3, 2, 1, 1, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2},
+    ["Kalista"]			=	{3, 1, 2, 3, 3, 4, 3, 1, 3, 1, 4, 1, 1, 2, 2, 4, 2, 2},
     ["Karma"]			=	{1, 3, 2, 1, 1, 4, 1, 3, 3, 1, 4, 3, 3, 2, 2, 4, 2, 2},
     ["Karthus"]			=	{1, 3, 2, 1, 1, 4, 1, 1, 3, 3, 4, 3, 3, 2, 2, 4, 2, 2},
     ["Kassadin"]		=	{1, 2, 1, 3, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2},
@@ -97,7 +97,7 @@ Sequences = {
     ["Sivir"]			=	{1, 3, 1, 2, 1, 4, 1, 2, 1, 2, 4, 2, 3, 2, 3, 4, 3, 3},
     ["Skarner"]			=	{1, 2, 1, 2, 1, 4, 1, 2, 1, 2, 4, 2, 3, 3, 3, 4, 3, 3},
     ["Sona"]			=	{1, 2, 3, 1, 1, 4, 1, 2, 1, 2, 4, 2, 2, 3, 3, 4, 3, 3},
-    ["Soraka"]			=	{1, 3, 1, 2, 1, 4, 1, 2, 1, 3, 4, 2, 3, 2, 3, 4, 2, 3},
+    ["Soraka"]			=	{1, 2, 1, 2, 1, 4, 1, 3, 1, 2, 4, 2, 2, 3, 3, 4, 3, 3},
     ["Swain"]			=	{2, 3, 3, 1, 3, 4, 3, 1, 3, 1, 4, 1, 1, 2, 2, 4, 2, 2},
     ["Syndra"]			=	{1, 3, 1, 2, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2},
     ["Talon"]			=	{2, 3, 1, 2, 2, 4, 2, 1, 2, 1, 4, 1, 1, 3, 3, 4, 3, 3},
@@ -114,6 +114,7 @@ Sequences = {
     ["Varus"]			=	{1, 2, 3, 1, 1, 4, 1, 2, 1, 2, 4, 2, 2, 3, 3, 4, 3, 3},
     ["Vayne"]			=	{1, 3, 2, 1, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2},
     ["Veigar"]			=	{1, 3, 1, 2, 1, 4, 2, 2, 2, 2, 4, 3, 1, 1, 3, 4, 3, 3},
+	["Velkoz"]			=	{2, 3, 1, 2, 2, 4, 2, 1, 2, 1, 4, 1, 1, 3, 3, 4, 3, 3},
     ["Vi"]				=	{3, 1, 2, 3, 3, 4, 3, 1, 3, 1, 4, 1, 1, 2, 2, 4, 2, 2},
     ["Viktor"]			=	{3, 2, 3, 1, 3, 4, 3, 1, 3, 1, 4, 1, 2, 1, 2, 4, 2, 2},
     ["Vladimir"]		=	{1, 2, 1, 3, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2},
@@ -138,11 +139,14 @@ function OnLoad()
 	ALUMainMenu = scriptConfig('Auto Level-UP', 'ALU_MAIN')
 	
 	ALUMainMenu:addParam('Enable', 'Enable', SCRIPT_PARAM_ONOFF, false)
+	ALUMainMenu:addParam('AlwaysON', 'Always ON', SCRIPT_PARAM_ONOFF, false)
 	ALUMainMenu:addParam('Mode', 'Mode:', SCRIPT_PARAM_LIST, 1, {'Auto', 'Manual'})
     ALUMainMenu:addParam('Level13', 'Level 1-3:', SCRIPT_PARAM_LIST, 1, {'Q-W-E',  'Q-E-W',  'W-Q-E',  'W-E-Q',  'E-Q-W',  'E-W-Q'})
     ALUMainMenu:addParam('Level418', 'Level 4-18:', SCRIPT_PARAM_LIST, 1, {'Q-W-E',  'Q-E-W',  'W-Q-E',  'W-E-Q',  'E-Q-W',  'E-W-Q'})
 	
 	ALUMainMenu.Enable = false
+	
+	PrintChat("Auto Level-UP: " .. myHero.charName .. "'s sequence is " .. table.concat(Sequences[myHero.charName], "-"))
 end
 
 function OnTick()
@@ -152,7 +156,7 @@ function OnTick()
 end
 
 function LevelUp()
-	if ALUMainMenu.Enable then
+	if ALUMainMenu.Enable or ALUMainMenu.AlwaysON then
 		if ALUMainMenu.Mode == 1 then
 			Sequence = Sequences[myHero.charName]
 		elseif myHero.level < 4 then
@@ -161,15 +165,35 @@ function LevelUp()
 			Sequence = Sequences[ALUMainMenu.Level418]
 		end
 		
-		autoLevelSetSequence(Sequence)
+		-- autoLevelSetSequence(Sequence)
+		LevelSpell(Sequence[myHero.level])
 		
 		if myHero.level < 18 then
-			PrintChat("One point has been set to skill " .. Skills[Sequence[myHero.level]] .. ". Skill " .. Skills[Sequence[myHero.level + 1]] .. " will be increased once you Level-UP." );
+			PrintChat("This level: " .. Skills[Sequence[myHero.level]] .. " --- Next level: " .. Skills[Sequence[myHero.level + 1]] .. "." );
 		end
 		
 		LastLevel = myHero.level
 	else
-		autoLevelSetSequence(Sequences[0])
+		--autoLevelSetSequence(Sequences[0])
 	end
 
+end
+
+function LevelSpell(spell)
+  local offsets = { 
+    [1] = 0x1E,
+    [2] = 0xD3,
+    [3] = 0x3A,
+    [4] = 0xA8,
+  }
+  local p = CLoLPacket(0x00B6)
+  p.vTable = 0xFE3124
+  p:EncodeF(myHero.networkID)
+  p:Encode1(0xC1)
+  p:Encode1(offsets[spell])
+  for i = 1, 4 do p:Encode1(0x63) end
+  for i = 1, 4 do p:Encode1(0xC5) end
+  for i = 1, 4 do p:Encode1(0x6A) end
+  for i = 1, 4 do p:Encode1(0x00) end
+  SendPacket(p)
 end
